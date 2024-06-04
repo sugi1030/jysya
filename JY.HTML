@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사랑하는 진영이에게</title>
+    <style>
+        body {
+            font-family: 'Varela Round', 'Quicksand', sans-serif;
+            background-color: #ffe4e1;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        h1 {
+            color: #ff69b4;
+        }
+        
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+        
+        .mySlides {
+            display: none;
+        }
+        
+        .mySlides img {
+            height: 280px;
+            max-width: auto;
+            border-radius: 10px;
+        }
+        
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 2px;
+            width: 100%;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 0 0 10px 10px;
+        }
+        
+
+
+        .letter-container {
+            display: flex; /* flexbox 레이아웃 설정 */
+            justify-content: center; /* 가운데 정렬 */
+            align-items: center; /* 가운데 정렬 */
+        }
+
+        .letter-content {
+            flex: 1; /* 가용 공간 자동 채움 */
+            width: 400px; /* 원하는 최대 너비 값으로 변경 */
+            position: absolute; /* 절대 위치 설정 */
+            bottom: 180px; /* 하단 여백 설정 */
+            left: 50%; /* 왼쪽 여백 설정 */
+            transform: translateX(-50%); 
+            max-height: 300px; /* 원하는 최대 높이 값으로 변경 */
+            overflow-y: auto; /* 내용이 넘칠 때 스크롤바 자동 생성 */
+        }
+        
+        .letter-content p {
+            text-align: justify;
+        }
+
+        .letter-content p {
+            letter-spacing: 2px; /* 각 문자 사이 간격 2px 설정 */
+        }
+
+
+
+        .heart-button {
+            font-size: 2em;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .letter-content {
+            display: none;
+            background: #fffacd;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        
+        .promise-container ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .promise-container li {
+            margin: 10px 0;
+        }
+        
+        .promise-button {
+            background: #ff69b4;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        .promise-content {
+            display: none;
+            background: #fffacd;
+            padding: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        
+        .bucket-list-container ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .bucket-list-container li {
+            background: #ffb6c1;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title"></h1><span class="cursor"></span>
+        
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="./img/01.jpg" style="width:50%">
+                <div class="text">이런 사진도 찍었었군..ㅎㅎ</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="./img/02.jpg" style="width:50%">
+                <div class="text">성숙해 보이는군</div>
+            </div>
+            <div class="mySlides fade">
+                <img src="./img/03.jpg" style="width:50%">
+                <div class="text">이사진 참 좋아했는데 색감이 이뻐서</div>
+            </div>
+        </div>
+        
+        <div class="letter-container">
+            <button class="heart-button">💛</button>
+            <div class="letter-content">
+                <p>
+                    진영아 많이 힘들지만.. 나 기회 한 번더 줘서 정말 고마워..
+                    나 정말 많이 생각하고 내가 부족했던 부분들 많이 생각해볼수있었고
+                    너랑 통화하면서 좀 더 확실하게 알게되었어 물론 나도 마음 아픈말 들어서 속상하기도 하지만
+                    그래도 너랑 헤어지지 않게되서 그걸로 나는 정말 기뻐
+                    
+                    안진영 이라는 사람이 어렵다면 어렵긴 한데 (실제로 리얼 어려움) 나는 그 어려운것보다
+                    너에게 부족하게 했던 행동들에 대한 아쉬움 그리고 좋아하는 마음이 더 커서
+                    방법을 꼭 찾고싶어 아니 방법은 이미 찾았지 이제 내가 실행만 잘 하면된다!
+                    
+                    그리고 앞으로는 우리 좀더 소통 대화도 많이하자 일상적인 이야기는 기본이겠지만
+                    오늘 너가 한말중에 내가 마음이 가장 아팠던게.. 너가 회사에서 힘든일이 있었고 한데 내가 
+                    자꾸 릴스만 보내고 이상한 소리나 하고 했던거.. 나는 사실 기억이 없기는해 .
+                    너가 정말 힘들다고 하소연을 하고 이야기를 했다면 내가 진지하게 들어줬을텐데
+                    나는 그냥 귀여운 투정같은걸로 생각하고 가볍게 넘긴거 같아
+                    그런데 또 한편으로 서운한거는 나한테는 정말 고민이나 그런거 상담? 안하는거같더라
+                    동생과의 있었던 일도 나한테는 그럴일이있었다고 말안해주고 넘기고...
+                    나는 진영이 남자친구고 오빠인데 고민이나 힘든거 털어놓고 이야기 하면 좋겠어
+                    나도 그럴거고!
+                    
+                    이번 기회로 정말 소소한것들에 대해 다시 생각도 해밨어
+                    사진첩 예전폰꺼부터 해서 보면서 그냥 하늘 사진이 있더라 보니깐 진여이랑 차타고 어딘가를 가면서 구름이 이뻐서
+                    내가 진영이보고 찍으라고 했던거같아. 
+                    어떻게 보면 엄청난 일이 아니잖아. 정말 소소한건데 이렇게 사진으로 남겨두니 기억이 나더라.
+                    잊고있었는데..
+                    그냥 같이 차를 타고 목적지 없이 이동하는 그 시간도 소중했구나 하고 느낀거 같아
+                    한마디로 우리가 지금 매번 만나서 하는 데이트가 지루했던게 아니라 그 소중함을 느끼게 내가 못해줬기 때문에 진영이가 그렇게 느낀거같다..
+                    앞으로는 정말 추억 많이 남기고 짧게 만나더라도 즐겁게 있고싶다..
+                    진영이 생각은 모르겠지만..
+                    
+                    여튼 이번 기회에 정말 많이 반성하고 돌아볼수 있었던거 같아.
+                    힘들수도있고 어려울수도있지만 나는 포기하고싶지않다! 진영이도 포기하지 않았으면 한다!
+                    나는 그리고 ..진영이를 그런거 하려고 만나는것도 아니야..정말.. 진영이니깐..그러는건데..앞으로 상황에 맞는 행동을 하도록 할게.
+                    
+                    2024년 6월 5일이 다시 1일이 되버렸네 어쩌다가 ㅎㅎ.
+                    긍정적으로 생각해서 우리의 미래를 1회 체험 했다고 치고
+                    다시 과거로 돌아온거니 정말..잘해보자 오빠가 더 노력할게.
+                    내가 100 노력하면 진영이는 10만 노력해도 된다!
+                    
+                    여튼.. 하고싶은 말은.. 많지만 그건 만나서해도 될거같구..
+                    진영이 보고싶다.
+                    
+                    정말 미안하고 고맙고 사랑한다.
+                    
+                    
+                    
+                    
+                    
+                    
+                    </p>
+            </div>
+        </div>
+        
+        <div class="promise-container">
+            <h2>미래에 대한 약속</h2>
+            <ul>
+                <li><button class="promise-button">클릭해봐!</button>
+                    <div class="promise-content">
+                        <p>진영이가 싫다는거는 무조건 안하기</p>
+                    </div>
+                </li>
+                <li><button class="promise-button">클릭해봐!</button>
+                    <div class="promise-content">
+                        <p>눈치있게 행동하기</p>
+                    </div>
+                </li>
+                <li><button class="promise-button">클릭해봐!</button>
+                    <div class="promise-content">
+                        <p>말 이쁘게 하기</p>
+                    </div>
+                </li>
+                <li><button class="promise-button">클릭해봐!</button>
+                    <div class="promise-content">
+                        <p>표현 잘하기</p>
+                    </div>
+                </li>
+                <li><button class="promise-button">클릭해봐!</button>
+                    <div class="promise-content">
+                        <p>진영이 아껴주기</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="bucket-list-container">
+            <h2>6월의 버킷리스트</h2>
+            <ul>
+                <li>이쁘게 사진 찍기</li>
+                <li>서로에 대해 진지한 이야기 해보기</li>
+                <li>다시 행복해지기</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let slideIndex = 0;
+            showSlides();
+        
+            function showSlides() {
+                let slides = document.getElementsByClassName("mySlides");
+                for (let i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}
+                slides[slideIndex-1].style.display = "block";
+                setTimeout(showSlides, 2500); 
+            }
+        
+            document.querySelector('.heart-button').addEventListener('click', function() {
+                let letterContent = document.querySelector('.letter-content');
+                letterContent.style.display = letterContent.style.display === 'block' ? 'none' : 'block';
+            });
+        
+            let promiseButtons = document.querySelectorAll('.promise-button');
+            promiseButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    let promiseContent = this.nextElementSibling;
+                    promiseContent.style.display = promiseContent.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+
+
+        const titleElement = document.getElementById('title');
+        const titleText = '사랑하는 진영이에게';
+        let titleIndex = 0;
+
+        function typeTitle() {
+            if (titleIndex < titleText.length) {
+                titleElement.textContent += titleText.charAt(titleIndex);
+                titleIndex++;
+                setTimeout(typeTitle, 200); 
+            } else {
+                setTimeout(() => {
+                    titleElement.textContent = '';
+                    titleIndex = 0;
+                    typeTitle();
+                }, 2000); 
+            }
+        }
+
+        typeTitle();
+
+    </script>
+</body>
+</html>
